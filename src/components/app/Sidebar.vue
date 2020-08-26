@@ -10,23 +10,6 @@
     >
       <a href="#" class="waves-effect waves-orange pointer">{{ link.title }}</a>
     </router-link>
-
-
-    <li>
-      <a href="#" class="waves-effect waves-orange pointer">Счет</a>
-    </li>
-    <li>
-      <a href="#" class="waves-effect waves-orange pointer">История</a>
-    </li>
-    <li>
-      <a href="#" class="waves-effect waves-orange pointer">Планирование</a>
-    </li>
-    <li>
-      <a href="#" class="waves-effect waves-orange pointer">Новая запись</a>
-    </li>
-    <li>
-      <a href="#" class="waves-effect waves-orange pointer">Категории</a>
-    </li>
   </ul>
 </template>
 
@@ -36,11 +19,11 @@ export default {
   props:['value'],
   data: () => ({
     links: [
-      {title: 'Счет', url: '', to: {name: 'Home'}, exact: true},
-      {title: 'История', url: '', to: {name: 'History'}},
-      {title: 'Планирование', url: '', to: {name: 'Planning'}},
-      {title: 'Новая запись', url: '', to: {name: 'Record'}},
-      {title: 'Категории', url: '', to: {name: 'Categories'}}
+      {title: 'Счет', url: '', to: {name: 'home'}, exact: true},
+      {title: 'История', url: '', to: {name: 'history'}},
+      {title: 'Планирование', url: '', to: {name: 'planning'}},
+      {title: 'Новая запись', url: '', to: {name: 'record'}},
+      {title: 'Категории', url: '', to: {name: 'categories'}}
     ]
   })
 }
