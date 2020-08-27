@@ -62,12 +62,12 @@
           email: {required, email},
           password: {required, minLength: minLength(6)}
         },
-        methods:{
-          submitHandler(){
+        methods: {
+          async submitHandler() {
             this.$v.$touch();
 
-            if (this.$v.$invalid){
-                return
+            if (this.$v.$invalid) {
+              return
             }
 
             const formData = {
@@ -75,9 +75,12 @@
               password: this.password
             }
 
-            console.log('--->formData', formData);
+            try {
+              await this.$store.dispatch('login', formData)
+              this.$router.push({name: 'home'})
+            } catch (e){}
 
-            this.$router.push({name:'home'})
+
           }
         },
         mounted() {
