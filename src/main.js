@@ -7,11 +7,14 @@ import Vuelidate from "vuelidate"; //простая библиотека для 
 
 import dateFilter from "@/filters/date.filter";
 
+import messagePlugin from "@/utils/message.plugin"
+
 import './registerServiceWorker'
 import 'materialize-css/dist/js/materialize.min'
 
 Vue.config.productionTip = false
 
+Vue.use(messagePlugin)
 Vue.use(Vuelidate)
 
 Vue.filter('dateFilter', dateFilter); //регистрируем свой фильтр в приложение, называем dateFilter

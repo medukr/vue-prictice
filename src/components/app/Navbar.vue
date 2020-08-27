@@ -49,8 +49,8 @@ export default {
   }),
   methods:{
     logout(){
-      console.log('--->', 'Logout');
-      this.$router.push({name:'login', query:{message:'Logout'}})
+      console.log('--->', 'logout');
+      this.$router.push({name:'login', query:{message:'logout'}})
     }
   },
   mounted() {
